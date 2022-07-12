@@ -1,0 +1,154 @@
+:root{
+    --clr-font-family-1: 'Fraunces', serif;
+    --clr-font-family-2: 'Montserrat', sans-serif;
+    --clr-Dark-cyan: hsl(158, 36%, 37%);
+    --clr-Cream: hsl(30, 38%, 92%);
+    --clr-Very-dark-blue: hsl(212, 21%, 14%);
+    --clr-Dark-grayish-blue: hsl(228, 12%, 48%);
+    --clr-White: hsl(0, 0%, 100%);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    font-family: var(--clr-font-family-2);
+    margin: 0 auto;
+    background-color: var(--clr-Cream);
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 1.8rem 1.1rem;
+}
+.card{
+    width: 100%;
+    border-radius: 0.6rem;
+    background-color: var(--clr-White);
+    overflow: hidden;
+}
+.img{
+    width: 100%;
+}
+section{
+    padding:1rem 1.5rem;
+}
+h3{
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    color: var(--clr-Dark-grayish-blue);
+    font-weight: 500;
+}
+h1{
+    margin-top: 0.5rem;
+    font-family: var(--clr-font-family-1);
+    font-weight: 700;
+    font-size: 1.82rem;
+    line-height: 2rem;
+    margin-bottom: 1.2rem;
+    color: var(--clr-Very-dark-blue);
+}
+section p{
+    color: var(--clr-Dark-grayish-blue);
+    font-size: 0.8rem;
+    line-height: 1.3rem ;
+    margin-bottom: 2.75rem;
+}
+.price{
+    color: var(--clr-Dark-cyan);
+    font-family: var(--clr-font-family-1);
+    font-size: 1.9rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+.price span{
+    color: var(--clr-Dark-grayish-blue);
+    font-family: var(--clr-font-family-2);
+    font-weight: 500;
+    text-decoration: line-through;
+    font-size: 0.8rem;
+    text-decoration-thickness: 1.5px;
+}
+button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    width: 100%;
+    padding: 0.8rem;
+    background-color: var(--clr-Dark-cyan);
+    border-radius: 0.6rem;
+    border: none;
+    font-family: inherit;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+button:hover{
+    background-color: hsl(158, 86%, 11%) ;
+}
+button p{
+    margin: 0;
+    color: var(--clr-White);
+    font-size: 0.9rem;
+    font-weight: 700;
+    opacity: 0.9;
+}
+.desktop{
+    display: none;
+}
+@media screen and (min-width: 1440px) {
+    .container{
+        align-items: center;
+        justify-content: center;
+    }
+    .card{
+        display: flex;
+        align-items: center;
+        width: 43%;
+    }
+    .desktop{
+        display: block;
+        width:  50%;
+        height: 100%;
+    }
+    section{
+        padding: 1.8rem 2rem;
+        height: 100%;
+    }
+    h3{
+        margin-top: 0.35rem;
+        margin-bottom: 1.5rem;
+    }
+    h1{
+        font-size: 2rem;
+        line-height: 2rem;
+        margin-bottom: 2rem;
+    }
+    section p{
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+        
+    }
+    .price{
+        margin-bottom:1.3rem ;
+        font-size: 2rem;
+    }
+    button{
+        margin-bottom: 0;
+        margin-top: 0.8;
+    }
+    .mobile{
+        display: none;
+    }
+}
